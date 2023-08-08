@@ -823,10 +823,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.work .continer img {
+.work .continer > img {
+  width: 45%;
   max-width: 100%;
-  margin-right: 100px;
+  margin-right: 30px;
+}
+.work .continer .work-detials {
+  flex: 1;
 }
 .work .continer .work-detials .work-info {
   background-color: #f6f5f5;
@@ -839,7 +844,7 @@ a {
   z-index: 1;
 }
 .work .continer .work-detials .work-info img {
-  height: 60px;
+  width: 60px;
   margin-right: 30px;
 }
 .work .continer .work-detials .work-info .text {
@@ -869,6 +874,11 @@ a {
   height: 100%;
 }
 
+@media (max-width:767px) {
+  .continer > img {
+    margin-bottom: 30px;
+  }
+}
 @keyframes work-animation {
   0%, 40% {
     opacity: 0;
